@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shop OH-Dee wellness, home fragrance, car fragrance, sea moss and hibiscus tea. More Value, More Freshness!">
+  <meta name="theme-color" content="#123d2b">
+  <title>OH-Dee | Wellness in Every Product</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">More Value. More Freshness. Wellness in Every Product.</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="OH-Dee home">
+      <span class="brand-mark">OH</span>
+      <span class="brand-copy"><strong>OH-DEE</strong><small>WELLNESS IN EVERY PRODUCT</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#shop">Shop</a><a href="#combos">Combo Deals</a><a href="#story">Our Promise</a>
+    </nav>
+    <button class="cart-trigger" id="cartTrigger" aria-label="Open shopping cart">Bag <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">FRESHNESS FOR EVERY SPACE. WELLNESS FOR EVERY DAY.</p>
+        <h1>A little more care.<br><em>A lot more OH-Dee.</em></h1>
+        <p>Discover home and car fragrance, self-care essentials, sea moss and hibiscus tea — thoughtfully brought together for your everyday routine.</p>
+        <div class="hero-actions"><a class="button button-gold" href="#shop">Shop the collection</a><a class="text-link" href="#combos">Explore combo savings →</a></div>
+        <div class="trust-row"><span>✦ Everyday essentials</span><span>✦ Value bundles</span><span>✦ Wellness-inspired</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-card">
+          <span class="hero-leaf">✦</span><p>THE OH-DEE EDIT</p><strong>Fresh spaces.<br>Feel-good rituals.</strong><span class="hero-card-line"></span><small>HOME · CAR · SELF-CARE · WELLNESS</small>
+        </div>
+        <span class="floating-label label-top">HOME FRESHNESS</span><span class="floating-label label-bottom">YOUR DAILY RITUAL</span>
+      </div>
+    </section>
+
+    <section class="benefit-strip" aria-label="Store benefits">
+      <div><span>01</span><strong>Shop by need</strong><small>Find your everyday essential</small></div>
+      <div><span>02</span><strong>Save with combos</strong><small>More value in one order</small></div>
+      <div><span>03</span><strong>Simple ordering</strong><small>Build your bag as you browse</small></div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COLLECTION</p><h2>Shop OH-Dee essentials</h2><p class="section-intro">Choose a category to find products for your space, self-care routine or wellness cupboard.</p></div>
+      </div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="All">All products</button>
+        <button class="filter" data-filter="Home">Home fragrance</button>
+        <button class="filter" data-filter="Car">Car fragrance</button>
+        <button class="filter" data-filter="Self-care">Self-care</button>
+        <button class="filter" data-filter="Wellness">Sea moss & tea</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="combo-section" id="combos">
+      <div class="combo-intro">
+        <p class="eyebrow">BETTER TOGETHER</p><h2>Combo deals.<br><em>More value.</em></h2>
+        <p>Pair your favourites and make everyday freshness and wellness feel even more rewarding.</p>
+        <span class="combo-note">Prices shown in South African rand (ZAR).</span>
+      </div>
+      <div class="combo-list" id="comboList"></div>
+    </section>
+
+    <section class="promise-section" id="story">
+      <div class="promise-icon">✦</div><div><p class="eyebrow">THE OH-DEE PROMISE</p><h2>Small rituals. Feel-good moments.</h2><p>From a welcoming home to a fresh drive and everyday wellness, OH-Dee brings your essentials together in one convenient place.</p></div>
+      <a class="button button-light" href="#shop">Find your favourites</a>
+    </section>
+
+    <section class="newsletter">
+      <div><p class="eyebrow">STAY IN THE LOOP</p><h2>Fresh finds, straight to you.</h2><p>Join the OH-Dee updates list for new products and special offers.</p></div>
+      <form id="newsletterForm"><label class="sr-only" for="newsletterEmail">Email address</label><input id="newsletterEmail" type="email" placeholder="Your email address" required><button class="button button-dark" type="submit">Notify me</button></form>
+      <small class="newsletter-note" id="newsletterMessage">Demo form — connect an email marketing service before launch.</small>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand brand-footer" href="#"><span class="brand-mark">OH</span><span class="brand-copy"><strong>OH-DEE</strong><small>WELLNESS IN EVERY PRODUCT</small></span></a>
+    <p>Home fragrance · Car fragrance · Self-care · Wellness</p>
+    <div class="footer-links"><a href="#shop">Shop</a><a href="#combos">Combo deals</a><a href="https://ohdee.co.za/" target="_blank" rel="noopener">Current OH-Dee website</a></div>
+    <small>© <span id="year"></span> OH-Dee. Store preview — payment, delivery and customer contact details must be configured before launch.</small>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-head"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your bag <span id="drawerCount">(0)</span></h2></div><button class="close-cart" id="closeCart" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>✦</span><h3>Your bag is waiting</h3><p>Add a few OH-Dee favourites to get started.</p><button class="button button-dark" id="continueShopping">Continue shopping</button></div>
+    <div class="cart-bottom" id="cartBottom" hidden><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">R0</strong></div><p>Delivery fees, payment and final order confirmation will be arranged with OH-Dee.</p><button class="button button-gold button-full" id="checkoutButton">Enquire about this order</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
